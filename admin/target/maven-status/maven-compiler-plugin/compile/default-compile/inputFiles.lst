@@ -1,0 +1,9 @@
+F:\那些年写过的bug\开发框架模版\管理平台通用模版—（iview + spring boot + mybatis-plus）\common-admin-api\admin\src\main\java\com\njbandou\web\service\impl\AdminServiceImpl.java
+F:\那些年写过的bug\开发框架模版\管理平台通用模版—（iview + spring boot + mybatis-plus）\common-admin-api\admin\src\main\java\com\njbandou\web\config\MybatisPlusConfig.java
+F:\那些年写过的bug\开发框架模版\管理平台通用模版—（iview + spring boot + mybatis-plus）\common-admin-api\admin\src\main\java\com\njbandou\web\service\AdminService.java
+F:\那些年写过的bug\开发框架模版\管理平台通用模版—（iview + spring boot + mybatis-plus）\common-admin-api\admin\src\main\java\com\njbandou\web\dto\ListDTO.java
+F:\那些年写过的bug\开发框架模版\管理平台通用模版—（iview + spring boot + mybatis-plus）\common-admin-api\admin\src\main\java\com\njbandou\web\AdminApplication.java
+F:\那些年写过的bug\开发框架模版\管理平台通用模版—（iview + spring boot + mybatis-plus）\common-admin-api\admin\src\main\java\com\njbandou\web\controller\AdminController.java
+F:\那些年写过的bug\开发框架模版\管理平台通用模版—（iview + spring boot + mybatis-plus）\common-admin-api\admin\src\main\java\com\njbandou\web\aspect\HttpAspect.java
+F:\那些年写过的bug\开发框架模版\管理平台通用模版—（iview + spring boot + mybatis-plus）\common-admin-api\admin\src\main\java\com\njbandou\web\constant\AdminConstant.java
+F:\那些年写过的bug\开发框架模版\管理平台通用模版—（iview + spring boot + mybatis-plus）\common-admin-api\admin\src\main\java\com\njbandou\web\handle\ExceptionHandle.java

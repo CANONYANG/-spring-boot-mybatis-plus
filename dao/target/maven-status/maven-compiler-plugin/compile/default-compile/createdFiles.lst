@@ -1,0 +1,12 @@
+com\njbandou\web\entity\SysRoleMenu.class
+com\njbandou\web\util\MyBatisPlusGenerator.class
+com\njbandou\web\dao\SysRoleMenuMapper.class
+com\njbandou\web\entity\SysAdminRole.class
+com\njbandou\web\dao\SysRoleMapper.class
+com\njbandou\web\entity\SysAdmin.class
+com\njbandou\web\entity\SysMenu.class
+com\njbandou\web\dao\SysAdminMapper.class
+com\njbandou\web\entity\SysRole.class
+com\njbandou\web\dao\SysAdminRoleMapper.class
+com\njbandou\web\dao\SysMenuMapper.class
+com\njbandou\web\util\MyBatisPlusGenerator$1.class

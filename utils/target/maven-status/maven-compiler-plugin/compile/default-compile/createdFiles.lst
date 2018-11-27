@@ -1,0 +1,6 @@
+com\njbandou\web\result\Result.class
+com\njbandou\web\result\ResultUtil.class
+com\njbandou\web\result\PageResult.class
+com\njbandou\web\DateUtils.class
+com\njbandou\web\UUIDUtils.class
+com\njbandou\web\DateFormatUtils.class

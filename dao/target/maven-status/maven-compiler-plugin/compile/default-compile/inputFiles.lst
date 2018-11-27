@@ -1,0 +1,11 @@
+F:\那些年写过的bug\开发框架模版\管理平台通用模版—（iview + spring boot + mybatis-plus）\common-admin-api\dao\src\main\java\com\njbandou\web\dao\SysAdminMapper.java
+F:\那些年写过的bug\开发框架模版\管理平台通用模版—（iview + spring boot + mybatis-plus）\common-admin-api\dao\src\main\java\com\njbandou\web\dao\SysRoleMapper.java
+F:\那些年写过的bug\开发框架模版\管理平台通用模版—（iview + spring boot + mybatis-plus）\common-admin-api\dao\src\main\java\com\njbandou\web\dao\SysMenuMapper.java
+F:\那些年写过的bug\开发框架模版\管理平台通用模版—（iview + spring boot + mybatis-plus）\common-admin-api\dao\src\main\java\com\njbandou\web\dao\SysRoleMenuMapper.java
+F:\那些年写过的bug\开发框架模版\管理平台通用模版—（iview + spring boot + mybatis-plus）\common-admin-api\dao\src\main\java\com\njbandou\web\entity\SysAdminRole.java
+F:\那些年写过的bug\开发框架模版\管理平台通用模版—（iview + spring boot + mybatis-plus）\common-admin-api\dao\src\main\java\com\njbandou\web\dao\SysAdminRoleMapper.java
+F:\那些年写过的bug\开发框架模版\管理平台通用模版—（iview + spring boot + mybatis-plus）\common-admin-api\dao\src\main\java\com\njbandou\web\entity\SysAdmin.java
+F:\那些年写过的bug\开发框架模版\管理平台通用模版—（iview + spring boot + mybatis-plus）\common-admin-api\dao\src\main\java\com\njbandou\web\util\MyBatisPlusGenerator.java
+F:\那些年写过的bug\开发框架模版\管理平台通用模版—（iview + spring boot + mybatis-plus）\common-admin-api\dao\src\main\java\com\njbandou\web\entity\SysRole.java
+F:\那些年写过的bug\开发框架模版\管理平台通用模版—（iview + spring boot + mybatis-plus）\common-admin-api\dao\src\main\java\com\njbandou\web\entity\SysRoleMenu.java
+F:\那些年写过的bug\开发框架模版\管理平台通用模版—（iview + spring boot + mybatis-plus）\common-admin-api\dao\src\main\java\com\njbandou\web\entity\SysMenu.java
