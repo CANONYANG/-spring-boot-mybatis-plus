@@ -1,5 +1,6 @@
 package com.njbandou.web.controller;
 
+import com.njbandou.web.annotation.Authorization;
 import com.njbandou.web.dto.ListDTO;
 import com.njbandou.web.result.RestResult;
 import com.njbandou.web.result.RestResultBuilder;
@@ -27,6 +28,7 @@ public class RoleController {
     @Autowired
     private RoleService roleService;
 
+    @Authorization
     @RequestMapping(value = "/list", method = RequestMethod.GET)
     @RequiresPermissions("sys:role:list")
     public RestResult list(@Valid ListDTO listDTO, BindingResult bindingResult) {
@@ -36,6 +38,7 @@ public class RoleController {
         return roleService.getPage(listDTO);
     }
 
+    @Authorization
     @RequestMapping(value = "/save", method = RequestMethod.POST)
     @RequiresPermissions("sys:role:save")
     public RestResult add(@RequestBody Map map) {
@@ -46,6 +49,7 @@ public class RoleController {
         return new RestResultBuilder<>().success();
     }
 
+    @Authorization
     @RequestMapping(value = "/update", method = RequestMethod.POST)
     @RequiresPermissions("sys:role:update")
     public RestResult update(@RequestBody Map map) {
@@ -57,12 +61,14 @@ public class RoleController {
         return new RestResultBuilder<>().success();
     }
 
+    @Authorization
     @RequestMapping(value = "/delete", method = RequestMethod.POST)
     @RequiresPermissions("sys:role:delete")
     public RestResult delete(@RequestBody Integer[] pkIds) {
         return roleService.delete(pkIds);
     }
 
+    @Authorization
     @RequestMapping(value = "/info/{roleId}")
     @RequiresPermissions({"sys:role:list", "sys:role:info"})
     public RestResult info(@PathVariable Integer roleId) {

@@ -1,6 +1,7 @@
 package com.njbandou.web.redis;
 
 import com.google.gson.Gson;
+import com.njbandou.web.constant.AdminConstant;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.ValueOperations;
@@ -69,6 +70,16 @@ public class JWTRedisDAO {
 
     public void delete(String key) {
         redisTemplate.delete(key);
+    }
+
+    public boolean checkToken(String username, String token) {
+        String originToken = get(AdminConstant.SysAdmin_JWT_PREFIX + username);
+
+        if (originToken != null && originToken.equals(token)) {
+            return true;
+        }
+        return false;
+
     }
 
     /**

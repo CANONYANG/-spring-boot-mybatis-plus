@@ -1,5 +1,6 @@
 package com.njbandou.web.service.impl;
 
+import com.baomidou.mybatisplus.enums.SqlLike;
 import com.baomidou.mybatisplus.mapper.EntityWrapper;
 import com.baomidou.mybatisplus.plugins.Page;
 import com.njbandou.web.dao.SysMenuMapper;
@@ -44,7 +45,9 @@ public class RoleServiceImpl implements RoleService {
         BeanUtils.copyProperties(sysRole,listDTO);
         Page<SysRole> page = new Page<>(listDTO.getPageNum(),listDTO.getPageSize());
         EntityWrapper<SysRole> entityWrapper = new EntityWrapper<>();
-        entityWrapper.where("delete_flag={0}",0)
+        entityWrapper
+                .where("delete_flag={0}",0)
+                .like("name",listDTO.getKeywords(), SqlLike.DEFAULT)
                 .orderBy("create_time",true);
         List<SysRole> roles = sysRoleMapper.selectPage(page,entityWrapper);
 

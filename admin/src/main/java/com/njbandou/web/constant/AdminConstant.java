@@ -9,6 +9,10 @@ package com.njbandou.web.constant;
  */
 public class AdminConstant {
 
+    public static String AUTHORIZATION = "Authorization";
+
+    public static String USERNAME = "username";
+
     public static String JWT_SECRET = "123common123";
 
     public static String SysAdmin_JWT_PREFIX = "SysAdmin:jwt:";

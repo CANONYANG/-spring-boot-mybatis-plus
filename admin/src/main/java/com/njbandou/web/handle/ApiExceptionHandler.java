@@ -106,9 +106,9 @@ public class ApiExceptionHandler {
         }
         return new RestResultBuilder<T>()
                 .setErrCode(ResultCode.UNKNOWN_ERROR.getCode())
-//				.setErrMsg(ResultCode.UNKNOWN_ERROR.getMsg())
+				.setErrMsg(ResultCode.UNKNOWN_ERROR.getMsg())
                 //一般知道什么异常就行了，输出太多可能会导致端口暴露一类的问题
-                .setErrMsg(message)
+//                .setErrMsg(message)
                 .build();
     }
 

@@ -1,5 +1,6 @@
 package com.njbandou.web.controller;
 
+import com.njbandou.web.annotation.Authorization;
 import com.njbandou.web.dto.MenuDTO;
 import com.njbandou.web.result.RestResult;
 import com.njbandou.web.result.RestResultBuilder;
@@ -29,6 +30,7 @@ public class MenuController extends BaseController{
     @Autowired
     private MenuService menuService;
 
+    @Authorization
     @RequestMapping(value = "/list", method = RequestMethod.GET)
     @RequiresPermissions("sys:menu:list")
     public RestResult list() {
@@ -43,23 +45,28 @@ public class MenuController extends BaseController{
         return new RestResultBuilder<>().success().setData(pageResult);
     }
 
+    @Authorization
     @RequestMapping(value = "/save", method = RequestMethod.POST)
     @RequiresPermissions("sys:menu:save")
     public RestResult add(@RequestBody MenuDTO menuDTO){
         return menuService.addMenu(menuDTO);
     }
 
+    @Authorization
     @RequestMapping(value = "/update", method = RequestMethod.POST)
     @RequiresPermissions("sys:menu:update")
     public RestResult update(@RequestBody MenuDTO menuDTO){
         return menuService.updateMenu(menuDTO);
     }
+
+    @Authorization
     @RequestMapping(value = "/getFirstMenu", method = RequestMethod.GET)
     @RequiresPermissions("sys:menu:getFirstMenu")
     public RestResult getFirstMenu(){
         return menuService.getFirstMenu();
     }
 
+    @Authorization
     @RequestMapping(value = "/delete", method = RequestMethod.POST)
     @RequiresPermissions("sys:menu:delete")
     public RestResult delete(@RequestBody Integer[] pkIds) {

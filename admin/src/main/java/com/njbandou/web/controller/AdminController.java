@@ -1,7 +1,10 @@
 package com.njbandou.web.controller;
 
+import com.njbandou.web.annotation.Authorization;
+import com.njbandou.web.constant.AdminConstant;
 import com.njbandou.web.dto.AdminDTO;
 import com.njbandou.web.dto.ListDTO;
+import com.njbandou.web.redis.JWTRedisDAO;
 import com.njbandou.web.result.RestResult;
 import com.njbandou.web.result.RestResultBuilder;
 import com.njbandou.web.service.AdminService;
@@ -26,6 +29,8 @@ public class AdminController {
 
     @Autowired
     private AdminService adminService;
+    @Autowired
+    private JWTRedisDAO jwtRedisDAO;
 
     @RequestMapping(value="login",method = RequestMethod.POST)
     public RestResult login(@RequestBody AdminDTO adminDTO){
@@ -37,6 +42,7 @@ public class AdminController {
         return new RestResultBuilder<>().success();
     }
 
+    @Authorization
     @RequestMapping(value = "list", method = RequestMethod.GET)
     public Object list(@Valid ListDTO listDTO, BindingResult bindingResult) {
         if(bindingResult.hasErrors()){
@@ -45,30 +51,35 @@ public class AdminController {
         return adminService.getPage(listDTO);
     }
 
+    @Authorization
     @RequestMapping(value = "/save", method = RequestMethod.POST)
     @RequiresPermissions("sys:manager:save")
     public RestResult add(@RequestBody AdminDTO adminDTO){
         return adminService.add(adminDTO);
     }
 
+    @Authorization
     @RequestMapping(value = "/update", method = RequestMethod.POST)
     @RequiresPermissions("sys:manager:update")
     public RestResult update(@RequestBody AdminDTO adminDTO){
         return adminService.update(adminDTO);
     }
 
+    @Authorization
     @RequestMapping(value = "/delete", method = RequestMethod.POST)
     @RequiresPermissions("sys:manager:delete")
     public RestResult delete(@RequestBody Integer[] userIds){
         return adminService.delete(userIds);
     }
 
+    @Authorization
     @RequestMapping(value = "/updatePassword", method = RequestMethod.POST)
     @RequiresPermissions("sys:manager:updatePassword")
     public RestResult updatePassword(@RequestBody AdminDTO adminDTO){
         return adminService.updatePassword(adminDTO);
     }
 
+    @Authorization
     @RequestMapping(value="/unlock",method = RequestMethod.POST)
     public RestResult unlock(@RequestBody AdminDTO adminDTO){
         return adminService.unlock(adminDTO);

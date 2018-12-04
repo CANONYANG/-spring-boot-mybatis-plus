@@ -85,7 +85,7 @@ public class AdminServiceImpl implements AdminService {
                 .where("delete_flag={0}",0)
 //                .like("name",listDTO.getKeywords(),SqlLike.DEFAULT)
 //                .or()
-//                .like("phone",listDTO.getKeywords(),SqlLike.DEFAULT)
+                .like("phone",listDTO.getKeywords(),SqlLike.DEFAULT)
                 .orderBy("create_time",true);
         System.out.println(entityWrapper.getSqlSegment());
         List<SysAdmin> adminList = sysAdminMapper.selectPage(page,entityWrapper);

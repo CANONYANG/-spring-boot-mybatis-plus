@@ -16,7 +16,7 @@ public class BaseController {
 
     public Integer getAdminIdFromHeader(HttpServletRequest request){
 
-        String token = request.getHeader("Authorization");
+        String token = request.getHeader(AdminConstant.AUTHORIZATION);
 
         Map map = JWTUtils.getClaims(AdminConstant.JWT_SECRET, token);
 
